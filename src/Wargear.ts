@@ -1,4 +1,4 @@
-import DiceSkillValue from "./enums/DiceSkillValue";
+import { DiceSkillValueEnum } from "./enums/DiceSkillValue";
 
 class Wargear {
     constructor (
@@ -6,7 +6,7 @@ class Wargear {
         public name: string,
         public description: string,
         public attacks: number,
-        public skill: DiceSkillValue,
+        public skill: DiceSkillValueEnum,
         public strength: number,
         public armorPenetration: number,
         public damage: number,

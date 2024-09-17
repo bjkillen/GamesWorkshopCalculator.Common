@@ -1,4 +1,4 @@
-enum DiceSkillValueEnum {
+export enum DiceSkillValueEnum {
     Two = 'Two',
     Three = 'Three',
     Four = 'Four',
@@ -21,7 +21,7 @@ class DiceSkillValue {
 
     private constructor(public readonly value: DiceSkillValueEnum) {}
 
-    public static parse(key: string | null | undefined) {
+    public static parse(key: string | null | undefined): DiceSkillValue {
         if (key == null) {
             return new this(DiceSkillValueEnum.Two);
         }
@@ -29,7 +29,7 @@ class DiceSkillValue {
         return new this(DiceSkillValueEnum[key as keyof typeof DiceSkillValueEnum]);
     }
 
-    public static parseNumerical(value: number) {
+    public static parseNumerical(value: number): DiceSkillValue | undefined {
         switch (value) {
             case 2:
                 return DiceSkillValue.Two;
@@ -46,7 +46,7 @@ class DiceSkillValue {
         }
     }
 
-    public static parseDescription(value: string) {
+    public static parseDescription(value: string): DiceSkillValue | undefined  {
         switch (value) {
             case '2+':
                 return DiceSkillValue.Two;

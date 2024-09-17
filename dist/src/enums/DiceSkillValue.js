@@ -1,6 +1,7 @@
 "use strict";
 var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiceSkillValueEnum = void 0;
 var DiceSkillValueEnum;
 (function (DiceSkillValueEnum) {
     DiceSkillValueEnum["Two"] = "Two";
@@ -8,7 +9,7 @@ var DiceSkillValueEnum;
     DiceSkillValueEnum["Four"] = "Four";
     DiceSkillValueEnum["Five"] = "Five";
     DiceSkillValueEnum["Six"] = "Six";
-})(DiceSkillValueEnum || (DiceSkillValueEnum = {}));
+})(DiceSkillValueEnum || (exports.DiceSkillValueEnum = DiceSkillValueEnum = {}));
 class DiceSkillValue {
     constructor(value) {
         this.value = value;
