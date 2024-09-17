@@ -46,6 +46,23 @@ class DiceSkillValue {
         }
     }
 
+    public static parseDescription(value: string) {
+        switch (value) {
+            case '2+':
+                return DiceSkillValue.Two;
+            case '3+':
+                return DiceSkillValue.Three;
+            case '4+':
+                return DiceSkillValue.Four;
+            case '5+':
+                return DiceSkillValue.Five;
+            case '6+':
+                return DiceSkillValue.Six;
+            default:
+                return undefined;
+        }
+    }
+
     get numericalValue() {
         switch (this.value) {
             case DiceSkillValueEnum.Two:

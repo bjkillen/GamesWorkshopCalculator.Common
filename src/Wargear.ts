@@ -4,13 +4,12 @@ class Wargear {
     constructor (
         public datasheetId: string,
         public name: string,
+        public description: string,
         public attacks: number,
         public skill: DiceSkillValue,
+        public strength: number,
         public armorPenetration: number,
         public damage: number,
-        public sustainedHits: boolean,
-        public sustainedHitsCount: number,
-        public lethalHits: boolean,
     ) {}
 }
 
