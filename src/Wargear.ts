@@ -2,6 +2,7 @@ import DiceSkillValue from "./enums/DiceSkillValue";
 
 class Wargear {
     constructor (
+        public datasheetId: string,
         public name: string,
         public attacks: number,
         public skill: DiceSkillValue,
