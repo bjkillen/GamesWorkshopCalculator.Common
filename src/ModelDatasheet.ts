@@ -1,16 +1,48 @@
-import { DiceSkillValueEnum } from "./enums/DiceSkillValue";
-import Wargear from "./Wargear";
+import 'reflect-metadata';
+import { jsonObject, jsonMember } from 'typedjson';
 
+import DiceSkillValue from "./enums/DiceSkillValue";
+
+@jsonObject
 class ModelDatasheet {
+    @jsonMember
+    public datasheetId: string;
+
+    @jsonMember
+    public name: string;
+
+    @jsonMember
+    public toughness: number;
+
+    @jsonMember
+    public armorSaveSkill: DiceSkillValue;
+
+    @jsonMember
+    public invulnerableSave: boolean;
+
+    @jsonMember
+    public invulnerableSaveSkill: DiceSkillValue;
+
+    @jsonMember
+    public wounds: number;
+
     constructor (
-        public datasheetId: string,
-        public name: string,
-        public toughness: number,
-        public armorSaveSkill: DiceSkillValueEnum,
-        public invulnerableSave: boolean,
-        public invulnerableSaveSkill: DiceSkillValueEnum,
-        public wounds: number
-    ) {}
+        datasheetId: string,
+        name: string,
+        toughness: number,
+        armorSaveSkill: DiceSkillValue,
+        invulnerableSave: boolean,
+        invulnerableSaveSkill: DiceSkillValue,
+        wounds: number
+    ) {
+        this.datasheetId = datasheetId;
+        this.name = name;
+        this.toughness = toughness;
+        this.armorSaveSkill = armorSaveSkill;
+        this.invulnerableSave = invulnerableSave;
+        this.invulnerableSaveSkill = invulnerableSaveSkill;
+        this.wounds = wounds;
+    }
 }
 
 export default ModelDatasheet;
