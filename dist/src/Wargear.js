@@ -40,7 +40,7 @@ __decorate([
 ], Wargear.prototype, "description", void 0);
 __decorate([
     typedjson_1.jsonMember,
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], Wargear.prototype, "attacks", void 0);
 __decorate([
     typedjson_1.jsonMember,
@@ -56,10 +56,10 @@ __decorate([
 ], Wargear.prototype, "armorPenetration", void 0);
 __decorate([
     typedjson_1.jsonMember,
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], Wargear.prototype, "damage", void 0);
 Wargear = __decorate([
     typedjson_1.jsonObject,
-    __metadata("design:paramtypes", [String, String, String, Number, DiceSkillValue_1.default, Number, Number, Number])
+    __metadata("design:paramtypes", [String, String, String, String, DiceSkillValue_1.default, Number, Number, String])
 ], Wargear);
 exports.default = Wargear;

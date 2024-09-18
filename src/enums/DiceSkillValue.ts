@@ -3,7 +3,7 @@ export enum DiceSkillValueEnum {
     Three = 'Three',
     Four = 'Four',
     Five = 'Five',
-    Six = 'Six',
+    Six = 'Six'
 }
 
 class DiceSkillValue {
@@ -15,7 +15,7 @@ class DiceSkillValue {
 
     static readonly Five = new  DiceSkillValue(DiceSkillValueEnum.Five);
 
-    static readonly Six = new  DiceSkillValue(DiceSkillValueEnum.Six);
+    static readonly Six = new DiceSkillValue(DiceSkillValueEnum.Six);
 
     static readonly AllValues = [this.Two, this.Three, this.Four, this.Five, this.Six];
 

@@ -1,5 +1,6 @@
 import { jsonMember, jsonObject } from "typedjson";
 import DiceSkillValue from "./enums/DiceSkillValue";
+import WargearType from "./enums/WargearType";
 
 @jsonObject
 class Wargear {
@@ -13,7 +14,10 @@ class Wargear {
     public description: string;
 
     @jsonMember
-    public attacks: number;
+    public type: WargearType;
+
+    @jsonMember
+    public attacks: string;
 
     @jsonMember
     public skill: DiceSkillValue;
@@ -25,21 +29,23 @@ class Wargear {
     public armorPenetration: number;
 
     @jsonMember
-    public damage: number;
+    public damage: string;
 
     constructor (
         datasheetId: string,
         name: string,
         description: string,
-        attacks: number,
+        type: WargearType,
+        attacks: string,
         skill: DiceSkillValue,
         strength: number,
         armorPenetration: number,
-        damage: number,
+        damage: string,
     ) {
         this.datasheetId = datasheetId;
         this.name = name;
         this.description = description;
+        this.type = type;
         this.attacks = attacks;
         this.skill = skill;
         this.strength = strength;
