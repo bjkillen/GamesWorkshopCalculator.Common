@@ -14,11 +14,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const typedjson_1 = require("typedjson");
 const DiceSkillValue_1 = __importDefault(require("./enums/DiceSkillValue"));
+const WargearType_1 = __importDefault(require("./enums/WargearType"));
 let Wargear = class Wargear {
-    constructor(datasheetId, name, description, attacks, skill, strength, armorPenetration, damage) {
+    constructor(datasheetId, name, description, type, attacks, skill, strength, armorPenetration, damage) {
         this.datasheetId = datasheetId;
         this.name = name;
         this.description = description;
+        this.type = type;
         this.attacks = attacks;
         this.skill = skill;
         this.strength = strength;
@@ -38,6 +40,10 @@ __decorate([
     typedjson_1.jsonMember,
     __metadata("design:type", String)
 ], Wargear.prototype, "description", void 0);
+__decorate([
+    typedjson_1.jsonMember,
+    __metadata("design:type", WargearType_1.default)
+], Wargear.prototype, "type", void 0);
 __decorate([
     typedjson_1.jsonMember,
     __metadata("design:type", String)
@@ -60,6 +66,6 @@ __decorate([
 ], Wargear.prototype, "damage", void 0);
 Wargear = __decorate([
     typedjson_1.jsonObject,
-    __metadata("design:paramtypes", [String, String, String, String, DiceSkillValue_1.default, Number, Number, String])
+    __metadata("design:paramtypes", [String, String, String, WargearType_1.default, String, DiceSkillValue_1.default, Number, Number, String])
 ], Wargear);
 exports.default = Wargear;

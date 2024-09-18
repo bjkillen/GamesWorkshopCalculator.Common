@@ -7,5 +7,6 @@ import DiceSkillValue from "./src/enums/DiceSkillValue";
 import UnitDatasheet from "./src/UnitDatasheet";
 import ModelDatasheet from "./src/ModelDatasheet";
 import Wargear from "./src/Wargear";
+import WargearType from "./src/enums/WargearType";
 
-export { TypedJSON, FactionsMap, Faction, DiceSkillValue, UnitDatasheet, ModelDatasheet, Wargear };
+export { TypedJSON, FactionsMap, Faction, DiceSkillValue, UnitDatasheet, ModelDatasheet, Wargear, WargearType };
