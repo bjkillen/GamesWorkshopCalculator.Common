@@ -3,6 +3,7 @@ import { jsonObject, jsonMember, jsonArrayMember } from 'typedjson';
 
 import ModelDatasheet from "./ModelDatasheet";
 import Wargear from "./Wargear";
+import Keyword from './Keyword';
 
 @jsonObject
 class UnitDatasheet {
@@ -21,18 +22,23 @@ class UnitDatasheet {
     @jsonArrayMember(Wargear)
     public wargear: Wargear[];
 
+    @jsonArrayMember(Keyword)
+    public keywords: Keyword[];
+
     constructor (
         id: string,
         name: string,
         factionId: string,
         modelDatasheets: ModelDatasheet[],
         wargear: Wargear[],
+        keywords: Keyword[],
     ) {
         this.id = id;
         this.name = name;
         this.factionId = factionId;
         this.modelDatasheets = modelDatasheets;
         this.wargear = wargear;
+        this.keywords = keywords;
     }
 }
 

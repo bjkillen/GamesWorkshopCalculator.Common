@@ -8,5 +8,6 @@ import UnitDatasheet from "./src/UnitDatasheet";
 import ModelDatasheet from "./src/ModelDatasheet";
 import Wargear from "./src/Wargear";
 import WargearType from "./src/enums/WargearType";
+import Keyword from "./src/Keyword";
 
-export { TypedJSON, FactionsMap, Faction, DiceSkillValue, UnitDatasheet, ModelDatasheet, Wargear, WargearType };
+export { TypedJSON, FactionsMap, Faction, DiceSkillValue, UnitDatasheet, ModelDatasheet, Wargear, WargearType, Keyword };
