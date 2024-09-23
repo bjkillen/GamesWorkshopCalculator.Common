@@ -7,6 +7,7 @@ const typedjson_1 = require("typedjson");
 const DiceSkillValue_1 = __importDefault(require("./enums/DiceSkillValue"));
 const WargearType_1 = __importDefault(require("./enums/WargearType"));
 typedjson_1.TypedJSON.mapType(DiceSkillValue_1.default, {
+    deserializer: json => json == null ? json : DiceSkillValue_1.default.parse(json),
     serializer: value => value == null ? value : value.value.toString(),
 });
 typedjson_1.TypedJSON.mapType(WargearType_1.default, {

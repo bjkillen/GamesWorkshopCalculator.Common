@@ -2,7 +2,6 @@
 var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DiceSkillValueEnum = void 0;
-exports.DiceSkillValueDeserializer = DiceSkillValueDeserializer;
 var DiceSkillValueEnum;
 (function (DiceSkillValueEnum) {
     DiceSkillValueEnum["Two"] = "Two";
@@ -117,7 +116,4 @@ DiceSkillValue.Four = new _a(DiceSkillValueEnum.Four);
 DiceSkillValue.Five = new _a(DiceSkillValueEnum.Five);
 DiceSkillValue.Six = new _a(DiceSkillValueEnum.Six);
 DiceSkillValue.AllValues = [_a.Two, _a.Three, _a.Four, _a.Five, _a.Six];
-function DiceSkillValueDeserializer(json, params) {
-    return json == null ? json : DiceSkillValue.parse(json);
-}
 exports.default = DiceSkillValue;

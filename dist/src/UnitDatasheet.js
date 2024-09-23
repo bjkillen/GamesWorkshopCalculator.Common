@@ -17,14 +17,16 @@ const typedjson_1 = require("typedjson");
 const ModelDatasheet_1 = __importDefault(require("./ModelDatasheet"));
 const Wargear_1 = __importDefault(require("./Wargear"));
 const Keyword_1 = __importDefault(require("./Keyword"));
+const DatasheetAbility_1 = __importDefault(require("./DatasheetAbility"));
 let UnitDatasheet = class UnitDatasheet {
-    constructor(id, name, factionId, modelDatasheets, wargear, keywords) {
+    constructor(id, name, factionId, modelDatasheets, wargear, keywords, abilities) {
         this.id = id;
         this.name = name;
         this.factionId = factionId;
         this.modelDatasheets = modelDatasheets;
         this.wargear = wargear;
         this.keywords = keywords;
+        this.abilities = abilities;
     }
 };
 __decorate([
@@ -51,8 +53,12 @@ __decorate([
     (0, typedjson_1.jsonArrayMember)(Keyword_1.default),
     __metadata("design:type", Array)
 ], UnitDatasheet.prototype, "keywords", void 0);
+__decorate([
+    (0, typedjson_1.jsonArrayMember)(DatasheetAbility_1.default),
+    __metadata("design:type", Array)
+], UnitDatasheet.prototype, "abilities", void 0);
 UnitDatasheet = __decorate([
     typedjson_1.jsonObject,
-    __metadata("design:paramtypes", [String, String, String, Array, Array, Array])
+    __metadata("design:paramtypes", [String, String, String, Array, Array, Array, Array])
 ], UnitDatasheet);
 exports.default = UnitDatasheet;

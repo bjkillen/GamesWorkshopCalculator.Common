@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import { jsonObject, jsonMember } from 'typedjson';
 
-import DiceSkillValue, { DiceSkillValueDeserializer } from "./enums/DiceSkillValue";
+import DiceSkillValue from "./enums/DiceSkillValue";
 
 @jsonObject
 class ModelDatasheet {
@@ -14,14 +14,14 @@ class ModelDatasheet {
     @jsonMember
     public toughness: number;
 
-    @jsonMember({deserializer: DiceSkillValueDeserializer})
-    public armorSaveSkill: DiceSkillValue | undefined;
+    @jsonMember
+    public armorSaveSkill?: DiceSkillValue;
 
     @jsonMember
     public invulnerableSave: boolean;
 
-    @jsonMember({deserializer: DiceSkillValueDeserializer})
-    public invulnerableSaveSkill: DiceSkillValue | undefined;
+    @jsonMember
+    public invulnerableSaveSkill?: DiceSkillValue;
 
     @jsonMember
     public wounds: number;

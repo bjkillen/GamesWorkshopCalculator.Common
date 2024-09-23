@@ -1,4 +1,4 @@
-import { CustomDeserializerParams } from "typedjson/lib/types/metadata";
+import { CustomDeserializerParams, CustomSerializerParams } from "typedjson/lib/types/metadata";
 
 export enum DiceSkillValueEnum {
     Two = 'Two',
@@ -124,10 +124,6 @@ class DiceSkillValue {
                 return 0.8333333;
         }
     }
-}
-
-export function DiceSkillValueDeserializer(json: any, params: CustomDeserializerParams) {
-    return json == null ? json : DiceSkillValue.parse(json);
 }
 
 export default DiceSkillValue;

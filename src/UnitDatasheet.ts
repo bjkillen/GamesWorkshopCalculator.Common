@@ -4,6 +4,7 @@ import { jsonObject, jsonMember, jsonArrayMember } from 'typedjson';
 import ModelDatasheet from "./ModelDatasheet";
 import Wargear from "./Wargear";
 import Keyword from './Keyword';
+import DatasheetAbility from './DatasheetAbility';
 
 @jsonObject
 class UnitDatasheet {
@@ -25,6 +26,9 @@ class UnitDatasheet {
     @jsonArrayMember(Keyword)
     public keywords: Keyword[];
 
+    @jsonArrayMember(DatasheetAbility)
+    public abilities: DatasheetAbility[];
+
     constructor (
         id: string,
         name: string,
@@ -32,6 +36,7 @@ class UnitDatasheet {
         modelDatasheets: ModelDatasheet[],
         wargear: Wargear[],
         keywords: Keyword[],
+        abilities: DatasheetAbility[],
     ) {
         this.id = id;
         this.name = name;
@@ -39,6 +44,7 @@ class UnitDatasheet {
         this.modelDatasheets = modelDatasheets;
         this.wargear = wargear;
         this.keywords = keywords;
+        this.abilities = abilities;
     }
 }
 
