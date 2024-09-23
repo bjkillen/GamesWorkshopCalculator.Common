@@ -1,3 +1,5 @@
+import { CustomDeserializerParams } from "typedjson/lib/types/metadata";
+
 export enum DiceSkillValueEnum {
     Two = 'Two',
     Three = 'Three',
@@ -21,9 +23,9 @@ class DiceSkillValue {
 
     private constructor(public readonly value: DiceSkillValueEnum) {}
 
-    public static parse(key: string | null | undefined): DiceSkillValue {
+    public static parse(key: string | null | undefined): DiceSkillValue | undefined {
         if (key == null) {
-            return new this(DiceSkillValueEnum.Two);
+            return undefined;
         }
 
         return new this(DiceSkillValueEnum[key as keyof typeof DiceSkillValueEnum]);
@@ -122,6 +124,10 @@ class DiceSkillValue {
                 return 0.8333333;
         }
     }
+}
+
+export function DiceSkillValueDeserializer(json: any, params: CustomDeserializerParams) {
+    return json == null ? json : DiceSkillValue.parse(json);
 }
 
 export default DiceSkillValue;

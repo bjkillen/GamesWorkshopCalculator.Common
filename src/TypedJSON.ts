@@ -3,7 +3,6 @@ import DiceSkillValue from './enums/DiceSkillValue';
 import WargearType from './enums/WargearType';
 
 TypedJSON.mapType(DiceSkillValue, {
-    deserializer: json => json == null ? json : DiceSkillValue.parse(json),
     serializer: value => value == null ? value : value.value.toString(),
 });
 

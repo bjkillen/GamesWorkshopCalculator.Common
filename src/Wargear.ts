@@ -1,5 +1,5 @@
 import { jsonMember, jsonObject } from "typedjson";
-import DiceSkillValue from "./enums/DiceSkillValue";
+import DiceSkillValue, { DiceSkillValueDeserializer } from "./enums/DiceSkillValue";
 import WargearType from "./enums/WargearType";
 
 @jsonObject
@@ -19,8 +19,8 @@ class Wargear {
     @jsonMember
     public attacks: string;
 
-    @jsonMember
-    public skill: DiceSkillValue;
+    @jsonMember({deserializer: DiceSkillValueDeserializer})
+    public skill: DiceSkillValue | undefined;
 
     @jsonMember
     public strength: number;
@@ -37,7 +37,7 @@ class Wargear {
         description: string,
         type: WargearType,
         attacks: string,
-        skill: DiceSkillValue,
+        skill: DiceSkillValue | undefined,
         strength: number,
         armorPenetration: number,
         damage: string,
