@@ -11,6 +11,7 @@ import WargearType from "./src/enums/WargearType";
 import Keyword from "./src/Keyword";
 import DatasheetAbility from "./src/DatasheetAbility";
 import Ability from "./src/Ability";
+import RegexExtension from "./src/extensions/RegexExtension";
 
 export {
     TypedJSON,
@@ -23,5 +24,6 @@ export {
     WargearType,
     Keyword,
     DatasheetAbility,
-    Ability
+    Ability,
+    RegexExtension
 };
