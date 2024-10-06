@@ -16,9 +16,10 @@ require("reflect-metadata");
 const typedjson_1 = require("typedjson");
 const DiceSkillValue_1 = __importDefault(require("./enums/DiceSkillValue"));
 let ModelDatasheet = class ModelDatasheet {
-    constructor(datasheetId, name, toughness, armorSaveSkill, invulnerableSave, invulnerableSaveSkill, wounds) {
+    constructor(datasheetId, name, movement, toughness, armorSaveSkill, invulnerableSave, invulnerableSaveSkill, wounds) {
         this.datasheetId = datasheetId;
         this.name = name;
+        this.movement = movement;
         this.toughness = toughness;
         this.armorSaveSkill = armorSaveSkill;
         this.invulnerableSave = invulnerableSave;
@@ -34,6 +35,10 @@ __decorate([
     typedjson_1.jsonMember,
     __metadata("design:type", String)
 ], ModelDatasheet.prototype, "name", void 0);
+__decorate([
+    typedjson_1.jsonMember,
+    __metadata("design:type", String)
+], ModelDatasheet.prototype, "movement", void 0);
 __decorate([
     typedjson_1.jsonMember,
     __metadata("design:type", Number)
@@ -56,6 +61,6 @@ __decorate([
 ], ModelDatasheet.prototype, "wounds", void 0);
 ModelDatasheet = __decorate([
     typedjson_1.jsonObject,
-    __metadata("design:paramtypes", [String, String, Number, Object, Boolean, Object, Number])
+    __metadata("design:paramtypes", [String, String, String, Number, Object, Boolean, Object, Number])
 ], ModelDatasheet);
 exports.default = ModelDatasheet;

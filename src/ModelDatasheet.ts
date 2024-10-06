@@ -12,6 +12,9 @@ class ModelDatasheet {
     public name: string;
 
     @jsonMember
+    public movement: string;
+
+    @jsonMember
     public toughness: number;
 
     @jsonMember
@@ -29,6 +32,7 @@ class ModelDatasheet {
     constructor (
         datasheetId: string,
         name: string,
+        movement: string,
         toughness: number,
         armorSaveSkill: DiceSkillValue | undefined,
         invulnerableSave: boolean,
@@ -37,6 +41,7 @@ class ModelDatasheet {
     ) {
         this.datasheetId = datasheetId;
         this.name = name;
+        this.movement = movement;
         this.toughness = toughness;
         this.armorSaveSkill = armorSaveSkill;
         this.invulnerableSave = invulnerableSave;

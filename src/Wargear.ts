@@ -14,6 +14,9 @@ class Wargear {
     public description: string;
 
     @jsonMember
+    public range?: number;
+
+    @jsonMember
     public type: WargearType;
 
     @jsonMember
@@ -35,6 +38,7 @@ class Wargear {
         datasheetId: string,
         name: string,
         description: string,
+        range: number | undefined,
         type: WargearType,
         attacks: string,
         skill: DiceSkillValue | undefined,
@@ -45,6 +49,7 @@ class Wargear {
         this.datasheetId = datasheetId;
         this.name = name;
         this.description = description;
+        this.range = range;
         this.type = type;
         this.attacks = attacks;
         this.skill = skill;
