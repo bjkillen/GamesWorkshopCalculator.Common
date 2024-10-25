@@ -18,6 +18,18 @@ class DiceRerollModifierValue {
         }
         return new this(DiceRerollModifierValueEnum[key]);
     }
+    static parseDescriptionLower(value) {
+        switch (value.toLocaleLowerCase()) {
+            case 'none':
+                return _a.None;
+            case '1s':
+                return _a.Ones;
+            case 'all':
+                return _a.All;
+            default:
+                return undefined;
+        }
+    }
     get description() {
         switch (this.value) {
             case DiceRerollModifierValueEnum.None:

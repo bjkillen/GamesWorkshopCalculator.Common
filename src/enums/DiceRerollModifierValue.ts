@@ -23,6 +23,19 @@ class DiceRerollModifierValue {
         return new this(DiceRerollModifierValueEnum[key as keyof typeof DiceRerollModifierValueEnum]);
     }
 
+    public static parseDescriptionLower(value: string): DiceRerollModifierValue | undefined  {
+        switch (value.toLocaleLowerCase()) {
+            case 'none':
+                return DiceRerollModifierValue.None;
+            case '1s':
+                return DiceRerollModifierValue.Ones;
+            case 'all':
+                return DiceRerollModifierValue.All;
+            default:
+                return undefined;
+        }
+    }
+
     get description() {
         switch (this.value) {
             case DiceRerollModifierValueEnum.None:

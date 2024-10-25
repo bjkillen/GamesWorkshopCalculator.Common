@@ -27,7 +27,7 @@ class Stratagem {
     public description: string;
 
     @jsonMember
-    public stratagemEffect: StratagemEffect;
+    public stratagemEffect?: StratagemEffect;
 
     constructor(
         id: string,
@@ -37,7 +37,7 @@ class Stratagem {
         phase: string,
         detachment: string,
         description: string,
-        effect: StratagemEffect
+        effect: StratagemEffect | undefined
     ) {
         this.id = id;
         this.factionID = factionID;

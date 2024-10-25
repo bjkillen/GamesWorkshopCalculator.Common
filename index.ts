@@ -16,6 +16,8 @@ import DiceRerollModifierValue from "./src/enums/DiceRerollModifierValue";
 import Stratagem from "./src/Stratagem";
 import StratagemEffect from "./src/StratagemEffect";
 import StratagemQuestion from "./src/StratagemQuestion";
+import FactionStratagems from "./src/FactionStratagems";
+import FactionStratagemsMap from "./src/FactionStratagemsMap";
 
 export {
     TypedJSON,
@@ -33,5 +35,7 @@ export {
     DiceRerollModifierValue,
     Stratagem,
     StratagemEffect,
-    StratagemQuestion
+    StratagemQuestion,
+    FactionStratagems,
+    FactionStratagemsMap
 };

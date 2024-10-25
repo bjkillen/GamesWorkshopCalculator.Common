@@ -18,8 +18,8 @@ const DiceSkillValue_1 = __importDefault(require("./enums/DiceSkillValue"));
 const DiceRerollModifierValue_1 = __importDefault(require("./enums/DiceRerollModifierValue"));
 const StratagemQuestion_1 = __importDefault(require("./StratagemQuestion"));
 let StratagemEffect = class StratagemEffect {
-    constructor(datasheetID, factionID, cpCost, restriction, question, sustainedHits, criticalHits, criticalWounds, minusOneDamage, feelNoPain, toWoundPlusOne, rerollHits, bonusAttacks, stealth, bonusAP, bonusStrength, setWeaponSkill, toHitPlusOne, setInvulnerableSkill, toWoundMinusOne, lethalHits, questions) {
-        this.datasheetID = datasheetID;
+    constructor(stratagemID, factionID, cpCost, restriction, question, sustainedHits, criticalHits, criticalWounds, minusOneDamage, feelNoPain, toWoundPlusOne, rerollHits, bonusAttacks, stealth, bonusAP, bonusStrength, setWeaponSkill, toHitPlusOne, setInvulnerableSkill, toWoundMinusOne, lethalHits, questions) {
+        this.stratagemID = stratagemID;
         this.factionID = factionID;
         this.cpCost = cpCost;
         this.restriction = restriction;
@@ -46,7 +46,7 @@ let StratagemEffect = class StratagemEffect {
 __decorate([
     typedjson_1.jsonMember,
     __metadata("design:type", String)
-], StratagemEffect.prototype, "datasheetID", void 0);
+], StratagemEffect.prototype, "stratagemID", void 0);
 __decorate([
     typedjson_1.jsonMember,
     __metadata("design:type", String)

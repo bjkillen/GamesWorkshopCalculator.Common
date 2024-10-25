@@ -8,7 +8,7 @@ import StratagemQuestion from "./StratagemQuestion";
 @jsonObject
 class StratagemEffect {
     @jsonMember
-    public datasheetID: string;
+    public stratagemID: string;
 
     @jsonMember
     public factionID: string;
@@ -74,7 +74,7 @@ class StratagemEffect {
     public questions: StratagemQuestion[]
 
     constructor(
-        datasheetID: string,
+        stratagemID: string,
         factionID: string,
         cpCost: number,
         restriction: string | undefined,
@@ -97,7 +97,7 @@ class StratagemEffect {
         lethalHits: boolean,
         questions: StratagemQuestion[],
     ) {
-        this.datasheetID = datasheetID;
+        this.stratagemID = stratagemID;
         this.factionID = factionID;
         this.cpCost = cpCost;
         this.restriction = restriction;

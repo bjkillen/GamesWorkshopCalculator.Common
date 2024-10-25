@@ -61,6 +61,6 @@ __decorate([
 ], Stratagem.prototype, "stratagemEffect", void 0);
 Stratagem = __decorate([
     typedjson_1.jsonObject,
-    __metadata("design:paramtypes", [String, String, String, String, String, String, String, StratagemEffect_1.default])
+    __metadata("design:paramtypes", [String, String, String, String, String, String, String, Object])
 ], Stratagem);
 exports.default = Stratagem;

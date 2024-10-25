@@ -1,6 +1,6 @@
 {
   "name": "gamesworkshopcalculator.common",
-  "version": "1.0.42",
+  "version": "1.0.47",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
