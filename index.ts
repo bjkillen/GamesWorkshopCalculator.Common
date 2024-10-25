@@ -12,6 +12,10 @@ import Keyword from "./src/Keyword";
 import DatasheetAbility from "./src/DatasheetAbility";
 import Ability from "./src/Ability";
 import RegexExtension from "./src/extensions/RegexExtension";
+import DiceRerollModifierValue from "./src/enums/DiceRerollModifierValue";
+import Stratagem from "./src/Stratagem";
+import StratagemEffect from "./src/StratagemEffect";
+import StratagemQuestion from "./src/StratagemQuestion";
 
 export {
     TypedJSON,
@@ -25,5 +29,9 @@ export {
     Keyword,
     DatasheetAbility,
     Ability,
-    RegexExtension
+    RegexExtension,
+    DiceRerollModifierValue,
+    Stratagem,
+    StratagemEffect,
+    StratagemQuestion
 };
