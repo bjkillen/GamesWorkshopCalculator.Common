@@ -14,18 +14,23 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 require("reflect-metadata");
 const typedjson_1 = require("typedjson");
-const FactionDetachments_1 = __importDefault(require("./FactionDetachments"));
-let FactionStratagemsMap = class FactionStratagemsMap {
-    constructor(map) {
-        this.map = map;
+const Stratagem_1 = __importDefault(require("./Stratagem"));
+let DetachmentStratagems = class DetachmentStratagems {
+    constructor(id, name, stratagems) {
+        this.name = name;
+        this.stratagems = stratagems;
     }
 };
 __decorate([
-    (0, typedjson_1.jsonMapMember)(String, FactionDetachments_1.default),
-    __metadata("design:type", Map)
-], FactionStratagemsMap.prototype, "map", void 0);
-FactionStratagemsMap = __decorate([
+    typedjson_1.jsonMember,
+    __metadata("design:type", String)
+], DetachmentStratagems.prototype, "name", void 0);
+__decorate([
+    (0, typedjson_1.jsonArrayMember)(Stratagem_1.default),
+    __metadata("design:type", Array)
+], DetachmentStratagems.prototype, "stratagems", void 0);
+DetachmentStratagems = __decorate([
     typedjson_1.jsonObject,
-    __metadata("design:paramtypes", [Map])
-], FactionStratagemsMap);
-exports.default = FactionStratagemsMap;
+    __metadata("design:paramtypes", [String, String, Array])
+], DetachmentStratagems);
+exports.default = DetachmentStratagems;

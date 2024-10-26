@@ -4,10 +4,7 @@ import { jsonObject, jsonMember, jsonArrayMember } from 'typedjson';
 import Stratagem from './Stratagem';
 
 @jsonObject
-class FactionStratagems {
-    @jsonMember
-    public id: string;
-
+class DetachmentStratagems {
     @jsonMember
     public name: string;
 
@@ -15,10 +12,9 @@ class FactionStratagems {
     public stratagems: Stratagem[];
 
     constructor(id: string, name: string, stratagems: Stratagem[]) {
-        this.id = id;
         this.name = name;
         this.stratagems = stratagems;
     }
 }
 
-export default FactionStratagems;
+export default DetachmentStratagems;
