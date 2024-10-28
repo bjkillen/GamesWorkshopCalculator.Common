@@ -11,7 +11,7 @@ class DetachmentStratagems {
     @jsonArrayMember(Stratagem)
     public stratagems: Stratagem[];
 
-    constructor(id: string, name: string, stratagems: Stratagem[]) {
+    constructor(name: string, stratagems: Stratagem[]) {
         this.name = name;
         this.stratagems = stratagems;
     }

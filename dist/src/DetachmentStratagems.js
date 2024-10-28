@@ -16,7 +16,7 @@ require("reflect-metadata");
 const typedjson_1 = require("typedjson");
 const Stratagem_1 = __importDefault(require("./Stratagem"));
 let DetachmentStratagems = class DetachmentStratagems {
-    constructor(id, name, stratagems) {
+    constructor(name, stratagems) {
         this.name = name;
         this.stratagems = stratagems;
     }
@@ -31,6 +31,6 @@ __decorate([
 ], DetachmentStratagems.prototype, "stratagems", void 0);
 DetachmentStratagems = __decorate([
     typedjson_1.jsonObject,
-    __metadata("design:paramtypes", [String, String, Array])
+    __metadata("design:paramtypes", [String, Array])
 ], DetachmentStratagems);
 exports.default = DetachmentStratagems;

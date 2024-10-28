@@ -133,6 +133,6 @@ __decorate([
 ], StratagemEffect.prototype, "questions", void 0);
 StratagemEffect = __decorate([
     typedjson_1.jsonObject,
-    __metadata("design:paramtypes", [String, String, Number, Object, Boolean, Object, Object, Object, Boolean, Object, Boolean, Object, Number, Boolean, Number, Number, Object, Boolean, Object, Boolean, Boolean, Array])
+    __metadata("design:paramtypes", [String, String, Number, Object, Boolean, Object, Object, Object, Object, Object, Boolean, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Array])
 ], StratagemEffect);
 exports.default = StratagemEffect;

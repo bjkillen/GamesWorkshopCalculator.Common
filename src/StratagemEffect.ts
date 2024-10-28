@@ -32,43 +32,43 @@ class StratagemEffect {
     public criticalWounds?: DiceSkillValue;
 
     @jsonMember
-    public minusOneDamage: boolean;
+    public minusOneDamage?: boolean;
 
     @jsonMember
     public feelNoPain?: DiceSkillValue;
 
     @jsonMember
-    public toWoundPlusOne: boolean;
+    public toWoundPlusOne?: boolean;
 
     @jsonMember
     public rerollHits?: DiceRerollModifierValue;
 
     @jsonMember
-    public bonusAttacks: number;
+    public bonusAttacks?: number;
 
     @jsonMember
-    public stealth: boolean;
+    public stealth?: boolean;
 
     @jsonMember
-    public bonusAP: number;
+    public bonusAP?: number;
 
     @jsonMember
-    public bonusStrength: number;
+    public bonusStrength?: number;
 
     @jsonMember
     public setWeaponSkill?: DiceSkillValue;
 
     @jsonMember
-    public toHitPlusOne: boolean;
+    public toHitPlusOne?: boolean;
 
     @jsonMember
     public setInvulnerableSkill?: DiceSkillValue;
 
     @jsonMember
-    public toWoundMinusOne: boolean;
+    public toWoundMinusOne?: boolean;
 
     @jsonMember
-    public lethalHits: boolean;
+    public lethalHits?: boolean;
 
     @jsonArrayMember(StratagemQuestion)
     public questions: StratagemQuestion[]
@@ -82,19 +82,19 @@ class StratagemEffect {
         sustainedHits: number | undefined,
         criticalHits: DiceSkillValue | undefined,
         criticalWounds: DiceSkillValue | undefined,
-        minusOneDamage: boolean,
+        minusOneDamage: boolean | undefined,
         feelNoPain: DiceSkillValue | undefined,
         toWoundPlusOne: boolean,
         rerollHits: DiceRerollModifierValue | undefined,
-        bonusAttacks: number,
-        stealth: boolean,
-        bonusAP: number,
-        bonusStrength: number,
+        bonusAttacks: number | undefined,
+        stealth: boolean | undefined,
+        bonusAP: number | undefined,
+        bonusStrength: number | undefined,
         setWeaponSkill: DiceSkillValue | undefined,
-        toHitPlusOne: boolean,
+        toHitPlusOne: boolean | undefined,
         setInvulnerableSkill: DiceSkillValue | undefined,
-        toWoundMinusOne: boolean,
-        lethalHits: boolean,
+        toWoundMinusOne: boolean | undefined,
+        lethalHits: boolean | undefined,
         questions: StratagemQuestion[],
     ) {
         this.stratagemID = stratagemID;
