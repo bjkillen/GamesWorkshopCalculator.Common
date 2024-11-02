@@ -2,6 +2,7 @@ import { TypedJSON } from 'typedjson';
 import DiceSkillValue from './enums/DiceSkillValue';
 import WargearType from './enums/WargearType';
 import DiceRerollModifierValue from './enums/DiceRerollModifierValue';
+import StratagemType from './enums/StratagemType';
 
 TypedJSON.mapType(DiceSkillValue, {
     deserializer: json => json == null ? json : DiceSkillValue.parse(json),
@@ -15,6 +16,11 @@ TypedJSON.mapType(DiceRerollModifierValue, {
 
 TypedJSON.mapType(WargearType, {
     deserializer: json => json == null ? json : WargearType.parse(json),
+    serializer: value => value == null ? value : value.value.toString(),
+});
+
+TypedJSON.mapType(StratagemType, {
+    deserializer: json => json == null ? json : StratagemType.parse(json),
     serializer: value => value == null ? value : value.value.toString(),
 });
 

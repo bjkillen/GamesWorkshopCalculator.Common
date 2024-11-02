@@ -4,6 +4,7 @@ import { jsonObject, jsonMember, jsonArrayMember } from "typedjson";
 import DiceSkillValue from "./enums/DiceSkillValue";
 import DiceRerollModifierValue from "./enums/DiceRerollModifierValue";
 import StratagemQuestion from "./StratagemQuestion";
+import StratagemType from "./enums/StratagemType";
 
 @jsonObject
 class StratagemEffect {
@@ -21,6 +22,9 @@ class StratagemEffect {
 
     @jsonMember
     public question: boolean;
+
+    @jsonMember
+    public type: StratagemType;
 
     @jsonMember
     public sustainedHits?: number;
@@ -70,6 +74,9 @@ class StratagemEffect {
     @jsonMember
     public lethalHits?: boolean;
 
+    @jsonMember
+    public reducesAP: number;
+
     @jsonArrayMember(StratagemQuestion)
     public questions: StratagemQuestion[]
 
@@ -79,6 +86,7 @@ class StratagemEffect {
         cpCost: number,
         restriction: string | undefined,
         question: boolean,
+        type: StratagemType,
         sustainedHits: number | undefined,
         criticalHits: DiceSkillValue | undefined,
         criticalWounds: DiceSkillValue | undefined,
@@ -95,6 +103,7 @@ class StratagemEffect {
         setInvulnerableSkill: DiceSkillValue | undefined,
         toWoundMinusOne: boolean | undefined,
         lethalHits: boolean | undefined,
+        reducesAP: number,
         questions: StratagemQuestion[],
     ) {
         this.stratagemID = stratagemID;
@@ -102,6 +111,7 @@ class StratagemEffect {
         this.cpCost = cpCost;
         this.restriction = restriction;
         this.question = question;
+        this.type = type;
         this.sustainedHits = sustainedHits;
         this.criticalHits = criticalHits;
         this.criticalWounds = criticalWounds;
@@ -118,6 +128,7 @@ class StratagemEffect {
         this.setInvulnerableSkill = setInvulnerableSkill;
         this.toWoundMinusOne = toWoundMinusOne;
         this.lethalHits = lethalHits;
+        this.reducesAP = reducesAP;
         this.questions = questions;
     }
 }

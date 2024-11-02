@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DetachmentStratagems = exports.FactionStratagemsMap = exports.FactionDetachments = exports.StratagemQuestion = exports.StratagemEffect = exports.Stratagem = exports.DiceRerollModifierValue = exports.RegexExtension = exports.Ability = exports.DatasheetAbility = exports.Keyword = exports.WargearType = exports.Wargear = exports.ModelDatasheet = exports.UnitDatasheet = exports.DiceSkillValue = exports.Faction = exports.FactionsMap = exports.TypedJSON = void 0;
+exports.StratagemType = exports.DetachmentStratagems = exports.FactionStratagemsMap = exports.FactionDetachments = exports.StratagemQuestion = exports.StratagemEffect = exports.Stratagem = exports.DiceRerollModifierValue = exports.RegexExtension = exports.Ability = exports.DatasheetAbility = exports.Keyword = exports.WargearType = exports.Wargear = exports.ModelDatasheet = exports.UnitDatasheet = exports.DiceSkillValue = exports.Faction = exports.FactionsMap = exports.TypedJSON = void 0;
 require("reflect-metadata");
 const TypedJSON_1 = __importDefault(require("./src/TypedJSON"));
 exports.TypedJSON = TypedJSON_1.default;
@@ -43,3 +43,5 @@ const FactionStratagemsMap_1 = __importDefault(require("./src/FactionStratagemsM
 exports.FactionStratagemsMap = FactionStratagemsMap_1.default;
 const DetachmentStratagems_1 = __importDefault(require("./src/DetachmentStratagems"));
 exports.DetachmentStratagems = DetachmentStratagems_1.default;
+const StratagemType_1 = __importDefault(require("./src/enums/StratagemType"));
+exports.StratagemType = StratagemType_1.default;

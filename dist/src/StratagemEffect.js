@@ -17,13 +17,15 @@ const typedjson_1 = require("typedjson");
 const DiceSkillValue_1 = __importDefault(require("./enums/DiceSkillValue"));
 const DiceRerollModifierValue_1 = __importDefault(require("./enums/DiceRerollModifierValue"));
 const StratagemQuestion_1 = __importDefault(require("./StratagemQuestion"));
+const StratagemType_1 = __importDefault(require("./enums/StratagemType"));
 let StratagemEffect = class StratagemEffect {
-    constructor(stratagemID, factionID, cpCost, restriction, question, sustainedHits, criticalHits, criticalWounds, minusOneDamage, feelNoPain, toWoundPlusOne, rerollHits, bonusAttacks, stealth, bonusAP, bonusStrength, setWeaponSkill, toHitPlusOne, setInvulnerableSkill, toWoundMinusOne, lethalHits, questions) {
+    constructor(stratagemID, factionID, cpCost, restriction, question, type, sustainedHits, criticalHits, criticalWounds, minusOneDamage, feelNoPain, toWoundPlusOne, rerollHits, bonusAttacks, stealth, bonusAP, bonusStrength, setWeaponSkill, toHitPlusOne, setInvulnerableSkill, toWoundMinusOne, lethalHits, reducesAP, questions) {
         this.stratagemID = stratagemID;
         this.factionID = factionID;
         this.cpCost = cpCost;
         this.restriction = restriction;
         this.question = question;
+        this.type = type;
         this.sustainedHits = sustainedHits;
         this.criticalHits = criticalHits;
         this.criticalWounds = criticalWounds;
@@ -40,6 +42,7 @@ let StratagemEffect = class StratagemEffect {
         this.setInvulnerableSkill = setInvulnerableSkill;
         this.toWoundMinusOne = toWoundMinusOne;
         this.lethalHits = lethalHits;
+        this.reducesAP = reducesAP;
         this.questions = questions;
     }
 };
@@ -63,6 +66,10 @@ __decorate([
     typedjson_1.jsonMember,
     __metadata("design:type", Boolean)
 ], StratagemEffect.prototype, "question", void 0);
+__decorate([
+    typedjson_1.jsonMember,
+    __metadata("design:type", StratagemType_1.default)
+], StratagemEffect.prototype, "type", void 0);
 __decorate([
     typedjson_1.jsonMember,
     __metadata("design:type", Number)
@@ -128,11 +135,15 @@ __decorate([
     __metadata("design:type", Boolean)
 ], StratagemEffect.prototype, "lethalHits", void 0);
 __decorate([
+    typedjson_1.jsonMember,
+    __metadata("design:type", Number)
+], StratagemEffect.prototype, "reducesAP", void 0);
+__decorate([
     (0, typedjson_1.jsonArrayMember)(StratagemQuestion_1.default),
     __metadata("design:type", Array)
 ], StratagemEffect.prototype, "questions", void 0);
 StratagemEffect = __decorate([
     typedjson_1.jsonObject,
-    __metadata("design:paramtypes", [String, String, Number, Object, Boolean, Object, Object, Object, Object, Object, Boolean, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Array])
+    __metadata("design:paramtypes", [String, String, Number, Object, Boolean, StratagemType_1.default, Object, Object, Object, Object, Object, Boolean, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Number, Array])
 ], StratagemEffect);
 exports.default = StratagemEffect;

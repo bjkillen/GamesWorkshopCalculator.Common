@@ -19,6 +19,7 @@ import StratagemQuestion from "./src/StratagemQuestion";
 import FactionDetachments from "./src/FactionDetachments";
 import FactionStratagemsMap from "./src/FactionStratagemsMap";
 import DetachmentStratagems from "./src/DetachmentStratagems";
+import StratagemType from "./src/enums/StratagemType";
 
 export {
     TypedJSON,
@@ -39,5 +40,6 @@ export {
     StratagemQuestion,
     FactionDetachments,
     FactionStratagemsMap,
-    DetachmentStratagems
+    DetachmentStratagems,
+    StratagemType
 };
