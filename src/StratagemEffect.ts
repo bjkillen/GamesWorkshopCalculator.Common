@@ -5,6 +5,7 @@ import DiceSkillValue from "./enums/DiceSkillValue";
 import DiceRerollModifierValue from "./enums/DiceRerollModifierValue";
 import StratagemQuestion from "./StratagemQuestion";
 import StratagemType from "./enums/StratagemType";
+import Keyword from "./Keyword";
 
 @jsonObject
 class StratagemEffect {
@@ -17,8 +18,8 @@ class StratagemEffect {
     @jsonMember
     public cpCost: number;
 
-    @jsonMember
-    public restriction?: string;
+    @jsonArrayMember(Keyword)
+    public datasheetRestrictions: Keyword[];
 
     @jsonMember
     public question: boolean;
@@ -77,6 +78,18 @@ class StratagemEffect {
     @jsonMember
     public reducesAP: number;
 
+    @jsonMember
+    public devastatingWounds?: boolean;
+
+    @jsonMember
+    public rerollWounds?: DiceRerollModifierValue;
+
+    @jsonMember
+    public bonusDamage: number;
+
+    @jsonMember
+    public transhuman?: boolean;
+
     @jsonArrayMember(StratagemQuestion)
     public questions: StratagemQuestion[]
 
@@ -84,7 +97,7 @@ class StratagemEffect {
         stratagemID: string,
         factionID: string,
         cpCost: number,
-        restriction: string | undefined,
+        datasheetRestrictions: Keyword[],
         question: boolean,
         type: StratagemType,
         sustainedHits: number | undefined,
@@ -104,12 +117,16 @@ class StratagemEffect {
         toWoundMinusOne: boolean | undefined,
         lethalHits: boolean | undefined,
         reducesAP: number,
+        devastatingWounds: boolean | undefined,
+        rerollWounds: DiceRerollModifierValue | undefined,
+        bonusDamage: number,
+        transhuman: boolean | undefined,
         questions: StratagemQuestion[],
     ) {
         this.stratagemID = stratagemID;
         this.factionID = factionID;
         this.cpCost = cpCost;
-        this.restriction = restriction;
+        this.datasheetRestrictions = datasheetRestrictions;
         this.question = question;
         this.type = type;
         this.sustainedHits = sustainedHits;
@@ -129,6 +146,10 @@ class StratagemEffect {
         this.toWoundMinusOne = toWoundMinusOne;
         this.lethalHits = lethalHits;
         this.reducesAP = reducesAP;
+        this.devastatingWounds = devastatingWounds;
+        this.rerollWounds = rerollWounds;
+        this.bonusDamage = bonusDamage;
+        this.transhuman = transhuman;
         this.questions = questions;
     }
 }

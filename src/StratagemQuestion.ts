@@ -61,6 +61,18 @@ class StratagemQuestion {
     @jsonMember
     public reducesAP: number;
 
+    @jsonMember
+    public devastatingWounds?: boolean;
+
+    @jsonMember
+    public rerollWounds?: DiceRerollModifierValue;
+
+    @jsonMember
+    public bonusDamage: number;
+
+    @jsonMember
+    public transhuman?: boolean;
+
     constructor(
         stratagemID: string,
         questionText: string,
@@ -81,6 +93,10 @@ class StratagemQuestion {
         toWoundMinusOne: boolean | undefined,
         lethalHits: boolean | undefined,
         reducesAP: number,
+        devastatingWounds: boolean | undefined,
+        rerollWounds: DiceRerollModifierValue | undefined,
+        bonusDamage: number,
+        transhuman: boolean | undefined,
     ) {
         this.stratagemID = stratagemID;
         this.questionText = questionText;
@@ -101,6 +117,10 @@ class StratagemQuestion {
         this.toWoundMinusOne = toWoundMinusOne;
         this.lethalHits = lethalHits;
         this.reducesAP = reducesAP;
+        this.devastatingWounds = devastatingWounds;
+        this.rerollWounds = rerollWounds;
+        this.bonusDamage = bonusDamage;
+        this.transhuman = transhuman;
     }
 }
 

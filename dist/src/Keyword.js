@@ -27,6 +27,6 @@ __decorate([
 ], Keyword.prototype, "name", void 0);
 Keyword = __decorate([
     typedjson_1.jsonObject,
-    __metadata("design:paramtypes", [String, String])
+    __metadata("design:paramtypes", [Object, String])
 ], Keyword);
 exports.default = Keyword;

@@ -16,7 +16,7 @@ const typedjson_1 = require("typedjson");
 const DiceSkillValue_1 = __importDefault(require("./enums/DiceSkillValue"));
 const DiceRerollModifierValue_1 = __importDefault(require("./enums/DiceRerollModifierValue"));
 let StratagemQuestion = class StratagemQuestion {
-    constructor(stratagemID, questionText, sustainedHits, criticalHits, criticalWounds, minusOneDamage, feelNoPain, toWoundPlusOne, rerollHits, bonusAttacks, stealth, bonusAP, bonusStrength, setWeaponSkill, toHitPlusOne, setInvulnerableSkill, toWoundMinusOne, lethalHits, reducesAP) {
+    constructor(stratagemID, questionText, sustainedHits, criticalHits, criticalWounds, minusOneDamage, feelNoPain, toWoundPlusOne, rerollHits, bonusAttacks, stealth, bonusAP, bonusStrength, setWeaponSkill, toHitPlusOne, setInvulnerableSkill, toWoundMinusOne, lethalHits, reducesAP, devastatingWounds, rerollWounds, bonusDamage, transhuman) {
         this.stratagemID = stratagemID;
         this.questionText = questionText;
         this.sustainedHits = sustainedHits;
@@ -36,6 +36,10 @@ let StratagemQuestion = class StratagemQuestion {
         this.toWoundMinusOne = toWoundMinusOne;
         this.lethalHits = lethalHits;
         this.reducesAP = reducesAP;
+        this.devastatingWounds = devastatingWounds;
+        this.rerollWounds = rerollWounds;
+        this.bonusDamage = bonusDamage;
+        this.transhuman = transhuman;
     }
 };
 __decorate([
@@ -114,8 +118,24 @@ __decorate([
     typedjson_1.jsonMember,
     __metadata("design:type", Number)
 ], StratagemQuestion.prototype, "reducesAP", void 0);
+__decorate([
+    typedjson_1.jsonMember,
+    __metadata("design:type", Boolean)
+], StratagemQuestion.prototype, "devastatingWounds", void 0);
+__decorate([
+    typedjson_1.jsonMember,
+    __metadata("design:type", DiceRerollModifierValue_1.default)
+], StratagemQuestion.prototype, "rerollWounds", void 0);
+__decorate([
+    typedjson_1.jsonMember,
+    __metadata("design:type", Number)
+], StratagemQuestion.prototype, "bonusDamage", void 0);
+__decorate([
+    typedjson_1.jsonMember,
+    __metadata("design:type", Boolean)
+], StratagemQuestion.prototype, "transhuman", void 0);
 StratagemQuestion = __decorate([
     typedjson_1.jsonObject,
-    __metadata("design:paramtypes", [String, String, Object, Object, Object, Object, Object, Boolean, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Number])
+    __metadata("design:paramtypes", [String, String, Object, Object, Object, Object, Object, Boolean, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Number, Object, Object, Number, Object])
 ], StratagemQuestion);
 exports.default = StratagemQuestion;

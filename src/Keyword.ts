@@ -5,12 +5,12 @@ import { jsonObject, jsonMember } from 'typedjson';
 @jsonObject
 class Keyword {
     @jsonMember
-    public datasheetId: string;
+    public datasheetId?: string;
 
     @jsonMember
     public name: string;
 
-    constructor(datasheetId: string, name: string) {
+    constructor(datasheetId: string | undefined, name: string) {
         this.datasheetId = datasheetId;
         this.name = name;
     }
