@@ -20,6 +20,10 @@ import FactionDetachments from "./src/FactionDetachments";
 import FactionStratagemsMap from "./src/FactionStratagemsMap";
 import DetachmentStratagems from "./src/DetachmentStratagems";
 import StratagemType from "./src/enums/StratagemType";
+import ArmyList from "./src/ArmyList";
+import ArmyListUnitDatasheet from "./src/ArmyList/ArmyListUnitDatasheet";
+import ArmyListModelDatasheet from "./src/ArmyList/ArmyListModelDatasheet";
+import ArmyListWargear from "./src/ArmyList/ArmyListWargear";
 
 export {
     TypedJSON,
@@ -41,5 +45,9 @@ export {
     FactionDetachments,
     FactionStratagemsMap,
     DetachmentStratagems,
-    StratagemType
+    StratagemType,
+    ArmyList,
+    ArmyListUnitDatasheet,
+    ArmyListModelDatasheet,
+    ArmyListWargear
 };
